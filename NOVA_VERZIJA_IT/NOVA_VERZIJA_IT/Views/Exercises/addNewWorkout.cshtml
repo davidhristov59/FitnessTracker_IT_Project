@@ -1,0 +1,141 @@
+﻿@model NOVA_VERZIJA_IT.Models.WorkoutExercisePlans
+@{
+    ViewBag.Title = "Add New Workout";
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+    <style>
+
+        .workout-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+            .workout-container h2 {
+                text-align: center;
+                color: #333;
+            }
+
+            .workout-container .form-group {
+                margin-bottom: 15px;
+            }
+
+                .workout-container .form-group label {
+                    display: block;
+                    margin-bottom: 5px;
+                    font-weight: bold;
+                    color: #555;
+                }
+
+            .workout-container .form-control {
+                width: 100%;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+            }
+
+            .workout-container .checkbox-list {
+                list-style-type: none;
+                padding: 0;
+            }
+
+                .workout-container .checkbox-list li {
+                    margin-bottom: 10px;
+                    display: flex;
+                    align-items: center;
+                }
+
+                .workout-container .checkbox-list input[type="checkbox"] {
+                    margin-right: 10px;
+                }
+
+            .workout-container .btn-primary {
+                display: block;
+                width: 100%;
+                padding: 10px;
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                text-align: center;
+                font-size: 16px;
+                margin-top: 10px;
+            }
+
+                .workout-container .btn-primary:hover {
+                    background-color: #0056b3;
+                }
+
+        
+
+        /* Ensuring no white space in the navbar */
+        .navbar {
+            margin-bottom: 0;
+            padding: 0;
+        }
+
+            .navbar .container {
+                padding: 0;
+            }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="workout-container">
+        <h2>Add a new workout plan for @ViewBag.ExerciseName</h2>
+
+        @using (Html.BeginForm("addNewWorkout", "Exercises", FormMethod.Post, new { @class = "form-horizontal" }))
+        {
+            @Html.HiddenFor(m => m.exerciseID)
+
+            <div class="form-group">
+                <label>Select Workout Plans</label>
+                <ul class="checkbox-list">
+                    @foreach (var item in Model.WorkoutPlans)
+                    {
+                        <li>
+                            <input type="checkbox" name="selectedWorkoutPlanIDs" value="@item.Value" />
+                            <label>@item.Text</label>
+                        </li>
+                    }
+                </ul>
+
+                <label for="dayOfWeek">Select Day of the Week</label>
+                <select class="form-control" id="dayOfWeek" name="dayOfWeek">
+                    <option value="Monday">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                    <option value="Saturday">Saturday</option>
+                    <option value="Sunday">Sunday</option>
+                </select>
+
+                @Html.LabelFor(model => model.Sets, htmlAttributes: new { @class = "control-label" })
+                @Html.TextBoxFor(model => model.Sets, htmlAttributes: new { @class = "form-control" })
+
+                @Html.LabelFor(model => model.Reps, htmlAttributes: new { @class = "control-label" })
+                @Html.TextBoxFor(model => model.Reps, htmlAttributes: new { @class = "form-control" })
+
+            </div>
+
+            <button type="submit" class="btn-primary">Save</button>
+        }
+    </div>
+
+</body>
+
+</html>

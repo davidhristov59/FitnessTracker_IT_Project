@@ -1,0 +1,153 @@
+﻿@model NOVA_VERZIJA_IT.Models.Exercise
+
+
+
+@{
+    ViewBag.Title = "Exercise Details";
+
+    // Extract the video ID from the YouTube URL
+    string videoId = string.Empty;
+    if (!string.IsNullOrEmpty(Model.VideoUrl))
+    {
+        var videoUrlParts = Model.VideoUrl.Split(new string[] { "v=", "&" }, StringSplitOptions.None);
+        if (videoUrlParts.Length > 1)
+        {
+            videoId = videoUrlParts[1];
+        }
+    }
+}
+
+<style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+
+    .title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #343a40;
+        margin-bottom: 20px;
+    }
+
+    .category {
+        font-size: 1.5rem;
+        color: #6c757d;
+        margin-bottom: 10px;
+    }
+
+    .description {
+        font-size: 1.2rem;
+        color: #495057;
+        margin-bottom: 20px;
+    }
+
+    .video-wrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        background: #000;
+        margin-top: 20px;
+        border-radius: 10px;
+    }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+    .btn-outline-success {
+        background-color: transparent;
+        color: #5cb85c;
+        border: 1px solid #5cb85c;
+    }
+
+        .btn-outline-success:hover {
+            background-color: #5cb85c;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+
+    .btn-outline-secondary {
+        background-color: transparent;
+        color: #5cb85c;
+        border: 1px solid #5cb85c;
+    }
+
+        .btn-outline-secondary:hover {
+            background-color: #5cb85c;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+    .workout-plans-list {
+        padding: 0;
+        margin: 0;
+    }
+
+    .workout-plan-item {
+        padding: 10px;
+        margin: 8px 0;
+        background-color: #f8f9fa;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        transition: background-color 0.3s, box-shadow 0.3s;
+    }
+
+        .workout-plan-item a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            display: block;
+        }
+
+        .workout-plan-item:hover {
+            background-color: #e9ecef;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .workout-plan-item a:hover {
+            color: #0056b3;
+        }
+
+</style>
+
+<div class="container">
+    <div class="text-center">
+        <h1 class="title">@Model.Name</h1>
+        <h3 class="category">@Model.Category</h3>
+        <p class="description">@Model.Description</p>
+        <div class="video-wrapper">
+            @if (!string.IsNullOrEmpty(videoId))
+            {
+                <iframe src="https://www.youtube.com/embed/@videoId" frameborder="0" allowfullscreen></iframe>
+            }
+        </div>
+    </div>
+
+    <div style="margin-top: 20px;">
+
+        <h4>Workout Plans:</h4>
+
+        <div class="workout-plans-list">
+            @foreach (var item in Model.WorkoutPlans)
+            {
+                <div class="workout-plan-item">
+                    <a href="@Url.Action("Details", "WorkoutPlans", new { id = item.ID })">@item.Title</a>
+                </div>
+            }
+        </div>
+    </div>
+
+    <p>
+        @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-outline-success" })
+    </p>
+
+
+</div>

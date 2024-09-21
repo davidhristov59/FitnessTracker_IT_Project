@@ -1,0 +1,149 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<style>
+
+
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container {
+        padding: 0;
+        margin: 0 auto;
+        max-height: 695px;
+    }
+
+    .image-container {
+        position: relative;
+        height: 120vh;
+        width: 229vh;
+        overflow: hidden;
+        margin-left: -150px;
+        cursor: pointer;
+        transition: transform 0.5s ease-in-out; /* For sliding effect */
+    }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: transform 0.3s ease; /* For zoom effect */
+        }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s ease; /* For fade-in effect */
+    }
+
+    .centered-content {
+        text-align: center;
+        color: white;
+    }
+
+        .centered-content h1 {
+            font-size: 3rem;
+            font-weight: 800;
+        }
+
+        .centered-content p {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .centered-content .btn {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            background-color: darkslategrey;
+            border: 1px solid black;
+            transition: background-color 0.3s ease;
+        }
+
+            .centered-content .btn:hover {
+                background-color: firebrick;
+            }
+
+    /* Pop-out on hover */
+    .image-container:hover .overlay {
+        opacity: 1;
+    }
+
+    .image-container:hover img {
+        transform: scale(1.05); /* Slight zoom on hover */
+    }
+
+    /* Slide-in effect */
+    .slide-up {
+        transform: translateY(0); /* Reset position */
+    }
+
+    .slide-down {
+        transform: translateY(100%); /* Slide down */
+    }
+</style>
+
+
+<div class="container">
+
+    <div class="image-container">
+
+        <img src="~/images/pexels-victorfreitas-931321.jpg" / alt="background_photo">
+
+        <div class="overlay">
+            <div class="centered-content">
+                <h1 class="display-4">Welcome to FitForge</h1>
+                <p>Track your workouts, progress and diet, all in one place</p>
+
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <a class="btn btn-secondary btn-lg" href="@Url.Action("Index", "ActivityLogs")">See My Progress</a>
+                }
+
+                else
+                {
+
+                    <a class="btn btn-secondary btn-lg" href="@Url.Action("Register", "Account")">Sign Up</a>
+                }
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+@section scripts{
+
+    <script>
+        // JavaScript to make the overlay pop up
+        document.querySelector('.image-container').addEventListener('click', function () {
+            // Add a slide-up effect on click
+            this.classList.toggle('slide-up');
+            // Optionally, you can remove the slide-up class after the animation
+            setTimeout(() => {
+                this.classList.remove('slide-up');
+                this.classList.add('slide-down');
+            }, 500); // Adjust this timeout to match the CSS transition duration
+        });
+
+    </script>
+
+}

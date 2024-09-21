@@ -1,0 +1,311 @@
+﻿@model IEnumerable<NOVA_VERZIJA_IT.Models.Exercise>
+
+
+@{
+    ViewBag.Title = "Index";
+    var currentPage = ViewBag.CurrentPage as int? ?? 1;
+    var totalPages = ViewBag.TotalPages as int? ?? 1;
+    var currentSearch = ViewBag.CurrentSearch as string;
+    var currentCategory = ViewBag.CurrentCategory as string;
+    var currentMuscleGroups = ViewBag.CurrentMuscleGroups as List<string> ?? new List<string>();
+}
+
+
+<style>
+    body {
+        background-color: #f8f9fa;
+        overflow-x: hidden;
+    }
+
+    .container {
+        margin-top: 20px;
+    }
+
+    .card {
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+    }
+
+    .card-title, .card-category, .card-text {
+        margin-bottom: 10px;
+    }
+
+    .card-buttons {
+        margin-top: auto;
+    }
+
+    .card-item {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    .btn-create {
+        max-width: 200px;
+        padding: 10px 0;
+        border-radius: 5px;
+        margin-left: 15px;
+    }
+
+    .thumbnail-card {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+        width: 100%;
+        transition: opacity 0.5s ease;
+    }
+
+    .card-category {
+        font-size: 1.25rem;
+        color: #6c757d;
+        margin-bottom: 10px;
+    }
+
+    .card-musclegroup {
+        font-size: 1.15rem;
+        color: #3ab159;
+        margin-bottom: 10px;
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #343a40;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+
+    .thumbnail-card:hover {
+        opacity: 0.8;
+    }
+
+    .video-wrapper {
+        display: none;
+        position: relative;
+        width: 100%;
+        height: 200px;
+    }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+    .btn-small {
+        font-size: 0.8rem;
+        padding: 0.25rem 0.5rem;
+    }
+
+        .btn-small:hover {
+            background-color: #f8f9fa;
+            border-color: #adb5bd;
+            color: #212529;
+        }
+
+    .button-plan .btn {
+        font-size: 1.1rem;
+        padding: 0.6rem 0.4rem;
+    }
+
+        .button-plan .btn:hover {
+            background-color: #f8f9fa;
+            border-color: #adb5bd;
+            color: #212529;
+        }
+
+    .card-buttons .btn {
+        margin: 0.2rem;
+    }
+
+    .btn-dark {
+        color: #fff;
+        background-color: #143f6a;
+        border-color: #343a40;
+    }
+
+    .form-select {
+        max-width: 250px;
+    }
+
+    .input-group {
+        max-width: 400px;
+    }
+
+    .form-select,
+    .input-group,
+    .btn-create {
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+
+        .filter-group .input-group {
+            flex-wrap: wrap;
+        }
+
+            .filter-group .input-group .form-control,
+            .filter-group .input-group .btn {
+                width: 100%;
+                margin-top: 5px;
+            }
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+        .pagination a {
+            margin: 0 5px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #007bff;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+            .pagination a:hover {
+                background-color: #007bff;
+                color: #fff;
+            }
+
+            .pagination a.active {
+                background-color: #007bff;
+                color: #fff;
+            }
+
+    .muscle_group_form {
+        max-width: 250px;
+        margin-left: -260px;
+    }
+
+
+</style>
+
+<h2 class="text-center">List Of All Exercises</h2>
+
+<div class="row mb-4 align-items-center">
+    <div class="col-md-6 mb-2 mb-md-0">
+        @if (User.IsInRole("Admin"))
+        {
+            <!--Admin only-->
+            @Html.ActionLink("Create New Exercise", "Create", null, new { @class = "btn btn-dark btn-create w-100" })
+        }
+    </div>
+    <div class="col-md-6">
+        <form method="get" action="@Url.Action("Index")" class="d-flex justify-content-end align-items-center">
+
+            <select id="muscle_group_filter" name="muscleGroups" class="form-select me-2 muscle_group_form" >
+
+                <option value="">Filter By Muscle Group</option>
+
+                <option value="Back" @(currentMuscleGroups.Contains("Back") ? "selected" : "")>Back</option>
+                <option value="Chest" @(currentMuscleGroups.Contains("Chest") ? "selected" : "")>Chest</option>
+                <option value="Shoulders" @(currentMuscleGroups.Contains("Shoulders") ? "selected" : "")>Shoulders</option>
+                <option value="Legs" @(currentMuscleGroups.Contains("Legs") ? "selected" : "")>Legs</option>
+                <option value="Triceps" @(currentMuscleGroups.Contains("Triceps") ? "selected" : "")>Triceps</option>
+                <option value="Biceps" @(currentMuscleGroups.Contains("Biceps") ? "selected" : "")>Biceps</option>
+                <option value="Abs" @(currentMuscleGroups.Contains("Abs") ? "selected" : "")>Abs</option>
+                <option value="Forearms" @(currentMuscleGroups.Contains("Forearms") ? "selected" : "")>Forearms</option>
+                <option value="Traps" @(currentMuscleGroups.Contains("Traps") ? "selected" : "")>Traps</option>
+                <option value="Cardio @(currentMuscleGroups.Contains("Cardio") ? "selected" : "")">Cardio</option>
+            </select>
+
+            <select id="category_filter" name="category" class="form-select me-2">
+                <option value="">Filter By Category</option>
+                <option value="Weightlifting" @(currentCategory == "Weightlifting" ? "selected" : "")>Weightlifting</option>
+                <option value="Cardio/Endurance" @(currentCategory == "Cardio/Endurance" ? "selected" : "")>Cardio/Endurance</option>
+                <option value="Dumbbells/Isolation" @(currentCategory == "Dumbbells/Isolation" ? "selected" : "")>Dumbbells/Isolation</option>
+                <option value="Calisthenics/Bodyweight" @(currentCategory == "Calisthenics/Bodyweight" ? "selected" : "")>Calisthenics/Bodyweight</option>
+                <option value="Kettlebells" @(currentCategory == "Kettlebells" ? "selected" : "")>Kettlebells</option>
+                <option value="Olympic Weightlifting" @(currentCategory == "Olympic Weightlifting" ? "selected" : "")>Olympic Weightlifting</option>
+                <option value="Machine" @(currentCategory == "Machine" ? "selected" : "")>Machine</option>
+            </select>
+            <div class="input-group">
+
+                <input type="text" name="search" placeholder="Search an exercise" class="form-control" value="@currentSearch" />
+
+                <button type="submit" class="btn btn-primary">Apply</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class="row" id="card-container">
+        @foreach (var item in Model)
+        {
+            var videoUrlParts = item.VideoUrl.Split(new string[] { "v=", "&" }, StringSplitOptions.None);
+            var videoId = videoUrlParts.Length > 1 ? videoUrlParts[1] : string.Empty;
+            var thumbnailUrl = $"https://img.youtube.com/vi/{videoId}/0.jpg";
+
+            <div class="col-md-4 card-item">
+                <div class="card">
+                    <img src="@thumbnailUrl" alt="@item.Name" class="thumbnail-card" />
+                    <div class="card-body">
+                        <h3 class="card-category">@item.Category</h3>
+                        <h4 class="card-musclegroup">@string.Join(", ", item.muscleGroups)</h4>
+                        <h5 class="card-title">@item.Name</h5>
+                        <p class="card-text">@item.Description</p>
+                        <div class="card-buttons">
+                            @if (User.IsInRole("Admin"))
+                            {
+                                <div class="d-flex justify-content-center button-plan">
+                                    <!--USER ROLE - ADMIN -->
+                                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { @class = "btn btn-outline-primary btn-small" })
+                                    @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { @class = "btn btn-outline-danger btn-small" })
+                                    @Html.ActionLink("Add New Workout", "addNewWorkout", new { id = item.ID }, new { @class = "btn btn-outline-success btn-small" })
+                                </div>
+                            }
+                            <div class="d-flex justify-content-center">
+                                @Html.ActionLink("View Exercise", "Details", new { id = item.ID }, new { @class = "btn btn-dark btn-lg justify-content-center btn-view-exercise" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="pagination">
+        @if (ViewBag.CurrentPage > 1)
+        {
+            <a href="@Url.Action("Index", new { page = ViewBag.CurrentPage - 1 })">&laquo; Previous</a>
+        }
+
+        @for (int i = 1; i <= ViewBag.TotalPages; i++)
+        {
+            <a href="@Url.Action("Index", new { page = i })" class="@(i == ViewBag.CurrentPage ? "active" : "")">@i</a>
+        }
+
+        @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+        {
+            <a href="@Url.Action("Index", new { page = ViewBag.CurrentPage + 1 })">Next &raquo;</a>
+        }
+    </div>
+</div>
+

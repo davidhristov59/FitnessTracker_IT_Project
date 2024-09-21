@@ -1,0 +1,18 @@
+﻿@model NOVA_VERZIJA_IT.Models.FitnessUserWorkoutsPlans 
+@{
+    ViewBag.Title = "addNewWorkoutPlan";
+}
+
+<h2>addNewWorkoutPlan</h2>
+
+@using (Html.BeginForm("addNewWorkoutPlan", "FitnessUsers"))
+{
+    <div>
+        @Html.HiddenFor(m => m.FitnessID)
+        @Html.DropDownListFor(m => m.WPID,
+       new SelectList(Model.WorkoutPlans, "ID", "Title"))
+
+        <br />
+        <button>Save</button>
+    </div>
+}

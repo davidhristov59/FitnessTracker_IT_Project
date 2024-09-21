@@ -1,0 +1,41 @@
+﻿@model NOVA_VERZIJA_IT.Models.WorkoutPlanExercises
+@{
+    ViewBag.Title = "Add New Exercise";
+}
+
+<h2 class="text-center mb-4">Add a New Exercise</h2>
+
+<div class="container d-flex justify-content-center">
+    <div class="card shadow-lg p-4 mb-5 bg-white rounded" style="max-width: 500px; width: 100%;">
+        <div class="card-body">
+            @using (Html.BeginForm("addNewExercise", "WorkoutPlans", FormMethod.Post))
+            {
+                <div class="form-group">
+                    @Html.HiddenFor(m => m.workoutPlanID)
+
+                    <label for="exerciseID" class="form-label">Select Exercise</label>
+                    @Html.DropDownListFor(m => m.exerciseID,
+                        new SelectList(Model.Exercises, "ID", "Name"),
+                        "Choose an exercise",
+                        new { @class = "form-control" })
+
+                    <label for="dayOfWeek">Select Day of the Week</label>
+                    <select class="form-control" id="dayOfWeek" name="dayOfWeek">
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+                        <option value="Saturday">Saturday</option>
+                        <option value="Sunday">Sunday</option>
+                    </select>
+
+                </div>
+
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn btn-primary btn-lg">Save</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>

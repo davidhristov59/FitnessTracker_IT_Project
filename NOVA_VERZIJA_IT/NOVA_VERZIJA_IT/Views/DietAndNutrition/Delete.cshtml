@@ -1,0 +1,48 @@
+﻿@model NOVA_VERZIJA_IT.Models.DietAndNutrition
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>DietAndNutrition</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CaloriesGoal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CaloriesGoal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.totalCalories)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.totalCalories)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.caloriesRemaining)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.caloriesRemaining)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

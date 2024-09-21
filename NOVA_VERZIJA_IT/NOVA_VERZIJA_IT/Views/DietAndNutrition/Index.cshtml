@@ -1,0 +1,324 @@
+﻿@model NOVA_VERZIJA_IT.Models.DietAndNutrition
+
+@{
+    ViewBag.Title = "Diet and Nutrition";
+    double calories = 0;
+}
+
+
+<head>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    body {
+        font-family: 'Barlow', sans-serif;
+        background: #000000;
+    }
+
+    .col-md-6 {
+        margin-left: 20px;
+    }
+
+    .body-content {
+        background-color: #15191c;
+        padding: 10px;
+        border-radius: 15px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        margin-top: 20px;
+        color: #fff;
+    }
+
+    h2, h4 {
+        color: #f2e7d5; /* Softer cream color for headings */
+        font-weight: 800;
+        margin-bottom: 20px;
+    }
+
+    table {
+        width: 100%; /* Set all tables to occupy the full width of their container */
+        table-layout: fixed; /* Make all tables have equal column width */
+    }
+
+        table th {
+            background-color: #444; /* Darker header background for table */
+            color: #f2e7d5; /* Cream text for table headers */
+            font-weight: bold;
+            font-size: 14px;
+            padding: 12px;
+        }
+
+        table tbody tr:nth-child(odd) {
+            background-color: #666; /* Darker rows for contrast */
+        }
+
+        table tbody tr:nth-child(even) {
+            background-color: #555; /* Lighter alternate row color */
+        }
+
+        table td {
+            color: #eaeaea; /* Light text in table rows */
+            padding: 10px;
+            text-align: center;
+        }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 14px;
+        border-radius: 5px;
+        margin: 5px;
+    }
+
+    .btn-primary {
+        background-color: #ff8c00; /* Bright accent color for buttons */
+        border-color: #ff8c00;
+        color: #fff;
+    }
+
+    button#setCalorieGoalBtn {
+        margin-left: -260px;
+        margin-top: -30px;
+    }
+
+    .btn-dark {
+        background-color: #222; /* Darker button */
+        border-color: #444;
+        color: #fff;
+    }
+
+    #calorieGoalInput {
+        height: 38px;
+        border: 2px solid #fff; /* Light border for input */
+        background-color: #444; /* Darker input background */
+        color: #f2e7d5; /* Cream color for input text */
+    }
+
+    .btn-primary:hover, .btn-dark:hover {
+        background-color: #ff6700; /* Brighter hover effect */
+    }
+
+    #add_button {
+        margin-top: 30px;
+    }
+
+    .text-center {
+        margin-top: 60px;
+    }
+
+    #totalCalories, #caloriesGoal, #difference {
+        background-color: #444;
+        padding: 10px;
+        border-radius: 5px;
+        font-weight: 600;
+        color: #f2e7d5; /* Softer cream text */
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        background-color: transparent;
+    }
+
+        a:hover {
+            color: orange;
+            text-decoration: none;
+        }
+</style>
+
+<h2 class="text-center">Diet and Nutrition</h2>
+
+<div class="container">
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <label for="calorieGoalInput" class="form-label">Set your daily calorie goal:</label>
+            <input type="number" id="calorieGoalInput" class="form-control" placeholder="Enter your calorie goal">
+        </div>
+        <div class="col-md-2 align-self-end">
+            <button id="setCalorieGoalBtn" class="btn btn-primary w-100">Set Calorie Goal</button>
+        </div>
+        <div class="col-md-2" id="add_button">
+            @Html.ActionLink("Add Food", "AddFood", "DietAndNutrition", null, new { @class = "btn btn-dark btn-create w-100" })
+        </div>
+    </div>
+
+    <!-- Breakfast section -->
+    <h4 class="text-center">Breakfast</h4>
+    <table class="table table-bordered table-sm">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Serving Size (grams)</th>
+                <th>Protein (grams)</th>
+                <th>Carbs (grams)</th>
+                <th>Fat (grams)</th>
+                <th>Calories</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.BreakfastFoods)
+            {
+                calories += item.Calories;
+                <tr>
+                    <td>
+                        <a href="@Url.Action("Details", "DietAndNutrition", new { id = item.Id })">@item.Name</a>
+                    </td>
+                    <td>@item.ServingSize</td>
+                    <td>@item.Protein</td>
+                    <td>@item.Carbs</td>
+                    <td>@item.Fats</td>
+                    <td>@item.Calories</td>
+                    <td>@Html.ActionLink("Delete", "DeleteFood", "DietAndNutrition", new { id = item.Id }, new { @class = "btn btn-danger btn-sm delete-button", @data_id = item.Id })</td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+
+    <!--Lunch-->
+    <h4 class="text-center">Lunch</h4>
+    <table class="table table-bordered table-sm" id="lunch_tabela">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Serving Size (grams)</th>
+                <th>Protein (grams)</th>
+                <th>Carbs (grams)</th>
+                <th>Fat (grams)</th>
+                <th>Calories</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.LunchFoods)
+            {
+                calories += item.Calories;
+                <tr>
+                    <td>
+                        <a href="@Url.Action("Details", "DietAndNutrition", new { id = item.Id })">@item.Name</a>
+                    </td>
+                    <td>@item.ServingSize</td>
+                    <td>@item.Protein</td>
+                    <td>@item.Carbs</td>
+                    <td>@item.Fats</td>
+                    <td>@item.Calories</td>
+                    <td>@Html.ActionLink("Delete", "DeleteFood", "DietAndNutrition", new { id = item.Id }, new { @class = "btn btn-danger btn-sm delete-button", @data_id = item.Id })</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <!-- Dinner-->
+    <h4 class="text-center">Dinner</h4>
+    <table class="table table-bordered table-sm" id="dinner_tabela">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Serving Size (grams)</th>
+                <th>Protein (grams)</th>
+                <th>Carbs (grams)</th>
+                <th>Fat (grams)</th>
+                <th>Calories</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.DinnerFoods)
+            {
+                calories += item.Calories;
+                <tr>
+                    <td>
+                        <a href="@Url.Action("Details", "DietAndNutrition", new { id = item.Id })">@item.Name</a>
+                    </td>
+                    <td>@item.ServingSize</td>
+                    <td>@item.Protein</td>
+                    <td>@item.Carbs</td>
+                    <td>@item.Fats</td>
+                    <td>@item.Calories</td>
+                    <td>@Html.ActionLink("Delete", "DeleteFood", "DietAndNutrition", new { id = item.Id }, new { @class = "btn btn-danger btn-sm delete-button", @data_id = item.Id })</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <!-- Snacks-->
+    <h4 class="text-center">Snacks</h4>
+    <table class="table table-bordered table-sm" id="snack_tabela">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Serving Size (grams)</th>
+                <th>Protein (grams)</th>
+                <th>Carbs (grams)</th>
+                <th>Fat (grams)</th>
+                <th>Calories</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.SnackFoods)
+            {
+                calories += item.Calories;
+                <tr>
+                    <td>
+                        <a href="@Url.Action("Details", "DietAndNutrition", new { id = item.Id })">@item.Name</a>
+                    </td>
+                    <td>@item.ServingSize</td>
+                    <td>@item.Protein</td>
+                    <td>@item.Carbs</td>
+                    <td>@item.Fats</td>
+                    <td>@item.Calories</td>
+                    <td>@Html.ActionLink("Delete", "DeleteFood", "DietAndNutrition", new { id = item.Id }, new { @class = "btn btn-danger btn-sm delete-button", @data_id = item.Id})</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+    <div style="margin-top: 30px">
+        <h5 id="totalCalories">Total calories: <strong>@calories</strong></h5>
+        <h5 id="caloriesGoal">Calories goal: <strong>0</strong></h5>
+        <h5 id="difference">You are <strong>0</strong> calories behind your goal!</h5>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+
+
+            $('#setCalorieGoalBtn').click(function () {
+                var calorieGoal = $('#calorieGoalInput').val();
+                if (calorieGoal && calorieGoal > 0) {
+                    $('#caloriesGoal strong').text(calorieGoal);
+                    var totalCalories = parseFloat($('#totalCalories strong').text());
+                    var difference = calorieGoal - totalCalories;
+
+                    if (difference >= 0) {
+                        $('#difference').text('You are ' + difference + ' calories behind your goal!');
+                    } else {
+                        $('#difference').text('You have exceeded your goal by ' + Math.abs(difference) + ' calories!');
+                    }
+                } else {
+                    alert('Please enter a valid calorie goal.');
+                }
+            });
+
+            // Initialize DataTables for tables
+            $("table").DataTable({
+                paging: false,
+                searching: false,
+                ordering: true,
+                info: false
+            });
+
+        });
+    </script>
+}

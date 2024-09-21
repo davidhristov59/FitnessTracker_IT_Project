@@ -1,0 +1,48 @@
+﻿@model NOVA_VERZIJA_IT.Models.AddUserToRoleModel
+
+@{
+    ViewBag.Title = "Add User To Role";
+}
+
+
+<h2 class="text-center">Add User To Role</h2>
+
+
+<div class="container">
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-6">
+
+            <div class="card mt-5">
+
+                <div class="card-body">
+
+                    @using (Html.BeginForm("AddUserToRole", "Account", new {@class = "form-horizontal", role="form"}))
+                    {
+                        <div class="form-group">
+
+                            @Html.LabelFor(m => m.Email, new {@class = "control-label"})
+                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                            <br />
+
+                            @Html.LabelFor(m => m.SelectedRole, new {@class = "control-label"})
+                            @Html.DropDownListFor(m => m.SelectedRole, new SelectList(Model.Roles), new { @class = "form-control" })
+                            <br />
+
+                            <button type="submit" class="btn btn-outline-success">Save</button>
+
+                        </div>
+                    }
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+

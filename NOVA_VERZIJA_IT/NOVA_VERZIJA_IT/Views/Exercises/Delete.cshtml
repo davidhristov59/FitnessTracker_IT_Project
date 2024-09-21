@@ -1,0 +1,124 @@
+﻿@model NOVA_VERZIJA_IT.Models.Exercise
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js"></script>
+    <style>
+        .delete-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f8f9fa; 
+        }
+
+        .delete-header {
+            margin-bottom: 20px;
+        }
+
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .delete-container .btn-danger {
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+
+            .delete-container .btn-danger:hover {
+                background-color: #c82333;
+                border-color: #bd2130;
+            }
+
+        .delete-container .btn-secondary {
+            background-color: #6c757d;
+            border-color: #6c757d;
+        }
+
+            .delete-container .btn-secondary:hover {
+                background-color: #5a6268;
+                border-color: #545b62;
+            }
+    </style>
+</head>
+
+<div class="delete-container">
+    <h2 class="delete-header">Delete Exercise</h2>
+
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>@Html.DisplayNameFor(model => model.Name)</dt>
+            <dd>@Html.DisplayFor(model => model.Name)</dd>
+
+            <dt>@Html.DisplayNameFor(model => model.Category)</dt>
+            <dd>@Html.DisplayFor(model => model.Category)</dd>
+
+            <dt>@Html.DisplayNameFor(model => model.Description)</dt>
+            <dd>@Html.DisplayFor(model => model.Description)</dd>
+
+            
+        </dl>
+
+        @using (Html.BeginForm("Delete", "Exercises", FormMethod.Post, new { id = "deleteForm" }))
+        {
+            @Html.AntiForgeryToken()
+            <input type="hidden" name="id" value="@Model.ID" />
+
+            <div class="form-actions no-color">
+                <button type="submit" id="delete-button" class="btn btn-danger">Delete</button>
+                @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-secondary" })
+            </div>
+        }
+    </div>
+</div>
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            $("#delete-button").on("click", function (e) {
+                e.preventDefault();
+
+                bootbox.confirm({
+                    title: "Delete Exercise",
+                    message: "Are you sure you want to delete this exercise?",
+                    buttons: {
+                        confirm: {
+                            label: "Delete",
+                            className: "btn-danger"
+                        },
+                        cancel: {
+                            label: "Cancel",
+                            className: "btn-secondary"
+                        }
+                    },
+                    callback: function (result) {
+                        if (result) {
+                            $('#deleteForm').submit();
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+}
+
+
+<!--
+
+    This input field holds the id of the exercise that is being deleted. Since it's hidden, users don't see it, but it's included in the form submission.
+
+    When the form is submitted (after the user confirms the deletion via Bootbox), the id is sent as part of the form data, allowing the server-side action to know which exercise to delete from the database.
+
+-->

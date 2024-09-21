@@ -1,0 +1,50 @@
+﻿@model NOVA_VERZIJA_IT.Models.WeeklyExercise
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>WeeklyExercise</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Exercise.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Exercise.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DayOfWeek)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DayOfWeek)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sets)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sets)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Reps)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Reps)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

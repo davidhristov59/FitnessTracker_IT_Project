@@ -1,0 +1,101 @@
+﻿@model NOVA_VERZIJA_IT.Models.WorkoutPlan
+
+@{
+    ViewBag.Title = "Create";
+}
+
+
+    <style>
+
+        body {
+            background-color: #f8f9fa;
+        }
+
+
+        .kopce {
+            margin-left: 120px;
+            border-radius: 4px;
+        }
+
+        .btn-outline-success {
+            background-color: transparent;
+            color: #5cb85c;
+            border: 1px solid #5cb85c;
+        }
+
+            .btn-outline-success:hover {
+                background-color: #5cb85c;
+                color: #fff;
+                transform: translateY(-2px);
+            }
+
+            .form-group{
+                width: 800px;
+                margin-bottom: 1rem;
+            }
+
+             label.control-label.col-md-2 {
+                 margin-left: -10px;
+              }
+
+    </style>
+
+
+<div class="container d-flex justify-content-center align-items-center ">
+
+     <div class="col-md-6">
+
+         <div class="card mt-5 border border-dark">
+
+             <div class="card-header">
+                 <h2>Create a Workout Plan</h2>
+             </div>
+
+             <div class="card-body">
+
+                 @using (Html.BeginForm())
+                 {
+                     @Html.AntiForgeryToken()
+
+                     <div class="form-horizontal">
+                         <hr />
+                         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                         <div class="form-group">
+                             @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+                                 @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                                 @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                         </div>
+
+                         <div class="form-group">
+                             @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+                                 @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                                 @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                         </div>
+
+                         <div class="form-group">
+                             @Html.LabelFor(model => model.ImageURL, htmlAttributes: new { @class = "control-label col-md-2" })
+                                 @Html.EditorFor(model => model.ImageURL, new { htmlAttributes = new { @class = "form-control" } })
+                                 @Html.ValidationMessageFor(model => model.ImageURL, "", new { @class = "text-danger" })
+                         </div>
+
+                         <div class="form-group">
+                             <input type="submit" value="Create" class="btn btn-primary kopce" />
+                         </div>
+                     </div>
+                 }
+
+                 <div>
+                     @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-outline-success" })
+                 </div>
+
+             </div>
+
+         </div>
+
+      </div>
+
+</div>
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }

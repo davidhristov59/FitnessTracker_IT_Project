@@ -1,0 +1,255 @@
+﻿@model NOVA_VERZIJA_IT.Models.Exercise
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<style>
+
+    body {
+        background-color: #f8f9fa;
+    }
+
+
+    #kopce {
+        margin-left: 120px;
+        border-radius: 4px;
+    }
+
+    .btn-outline-success {
+        background-color: transparent;
+        color: #5cb85c;
+        border: 1px solid #5cb85c;
+    }
+
+
+        .btn-outline-success:hover {
+            background-color: #5cb85c;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+
+
+    .muscle-group-container {
+        margin-bottom: 20px;
+    }
+
+    .muscle-group-label {
+        
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .muscle-group-select-wrapper {
+        position: relative;
+        width: 60%;
+    }
+
+    .muscle-group-select {
+        width: 100%;
+        padding: 10px;
+        font-size: 1em;
+        background-color: #f8f9fa;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        color: #495057;
+        cursor: pointer;
+        transition: border-color 0.3s ease;
+    }
+
+        .muscle-group-select:focus,
+        .muscle-group-select.active {
+            border-color: #80bdff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+    .muscle-group-options {
+        display: none;
+        position: absolute;
+        width: 100%;
+        background-color: #fff;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        max-height: 200px;
+        overflow-y: auto;
+        z-index: 1000;
+        list-style: none;
+    }
+
+        .muscle-group-options li {
+            padding: 10px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+            .muscle-group-options li:hover {
+                background-color: #e9ecef;
+            }
+
+    .muscle-group-validation {
+        margin-top: 10px;
+        font-size: 0.9em;
+        color: #dc3545;
+    }
+</style>
+
+<h2 class="text-center">Create A New Exercise</h2>
+
+<div class="container d-flex justify-content-center align-items-center ">
+
+    <div class="col-md-6">
+
+        <div class="card mt-5 border border-dark">
+
+            <div class="card-header">
+                <h2>@ViewBag.Title</h2>
+            </div>
+
+            <div class="card-body">
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-horizontal">
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                        <div class="form-group justify-content-center">
+                            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label" })
+                            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                        </div>
+
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Category, htmlAttributes: new { @class = "control-label " })
+                            @Html.DropDownListFor(model => model.Category,
+                                   new SelectList(new[] {
+                                       "Weightlifting",
+                                       "Cardio/Endurance",
+                                       "Dumbbells/Isolation",
+                                       "Calisthenics/Bodyweight",
+                                        "Olympic Weightlifting",
+                                        "Machine",
+                                       "Kettlebells"}),
+
+                                   "Select a category",
+
+                                   new { @class = "form-select" })
+
+                            @Html.ValidationMessageFor(model => model.Category, "", new { @class = "text-danger" })
+
+                        </div>
+
+                        <div class="form-group muscle-group-container">
+                            @Html.LabelFor(model => model.muscleGroups, htmlAttributes: new { @class = "control-label muscle-group-label" })
+
+                            <div class="muscle-group-select-wrapper">
+                                <div class="muscle-group-select" id="muscleGroupsSelect">
+                                    Select Muscle Groups
+                                </div>
+                                <ul class="muscle-group-options" id="muscleGroupOptions">
+                                    <li data-value="Back">Back</li>
+                                    <li data-value="Chest">Chest</li>
+                                    <li data-value="Shoulders">Shoulders</li>
+                                    <li data-value="Legs">Legs</li>
+                                    <li data-value="Triceps">Triceps</li>
+                                    <li data-value="Biceps">Biceps</li>
+                                    <li data-value="Traps">Traps</li>
+                                    <li data-value="Abs">Abs</li>
+                                    <li data-value="Cardio">Cardio</li>
+                                </ul>
+                            </div>
+
+                            <input type="hidden" id="muscleGroups" name="muscleGroups" />
+
+                            @Html.ValidationMessageFor(model => model.muscleGroups, "", new { @class = "text-danger muscle-group-validation" })
+                        </div>
+
+
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label" })
+                            @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                        </div>
+
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.VideoUrl, htmlAttributes: new { @class = "control-label" })
+                            @Html.EditorFor(model => model.VideoUrl, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.VideoUrl, "", new { @class = "text-danger" })
+                        </div>
+
+
+                        <div class="form-group">
+                            <input type="submit" value="Create" class="btn btn-primary kopce" />
+                        </div>
+                    </div>
+                }
+
+                <div>
+                    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-outline-success" })
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+@section scripts{
+
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script>
+
+        $(document).ready(function () {
+            const $muscleGroupsSelect = $('#muscleGroupsSelect');
+            const $muscleGroupOptions = $('#muscleGroupOptions');
+            const $muscleGroupsInput = $('#muscleGroups');
+
+            // Toggle dropdown on click
+            $muscleGroupsSelect.on('click', function () {
+                $muscleGroupOptions.toggle();
+                $muscleGroupsSelect.toggleClass('active');
+            });
+
+            // Select options
+            $muscleGroupOptions.on('click', 'li', function () {
+                const selectedValue = $(this).data('value');
+                const currentSelection = $muscleGroupsInput.val().split(',').filter(Boolean);
+
+                if (currentSelection.includes(selectedValue)) {
+                    currentSelection.splice(currentSelection.indexOf(selectedValue), 1);
+                    $(this).removeClass('selected');
+                } else {
+                    currentSelection.push(selectedValue);
+                    $(this).addClass('selected');
+                }
+
+                $muscleGroupsInput.val(currentSelection.join(', '));
+                $muscleGroupsSelect.text(currentSelection.join(', ') || 'Select Muscle Groups');
+            });
+
+            // Close the dropdown if clicked outside
+            $(document).on('click', function (event) {
+                if (!$muscleGroupsSelect.is(event.target) && !$muscleGroupOptions.is(event.target) && $muscleGroupOptions.has(event.target).length === 0) {
+                    $muscleGroupOptions.hide();
+                    $muscleGroupsSelect.removeClass('active');
+                }
+            });
+        });
+
+
+    </script>
+
+}

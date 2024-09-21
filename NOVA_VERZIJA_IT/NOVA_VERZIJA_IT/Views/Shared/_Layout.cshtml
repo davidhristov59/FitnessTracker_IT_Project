@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!--Bootstrap JavaScript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+
+    @{
+        string navbarClass = User.IsInRole("Admin") ? "navbar-admin" : "navbar-user";
+    }
+
+    <style>
+        .bg-dark {
+            background-color: #000000 !important;
+        }
+
+        .navbar-user .navbar-nav .nav-link {
+            color: white;
+            padding: 0 15px;
+            font-size: 16px;
+        }
+
+        .navbar-admin .navbar-nav .nav-link {
+            color: white;
+            padding: 0 15px;
+            font-size: 14px;
+        }
+
+        .navbar-dark .navbar-nav .nav-link:hover {
+            color: coral;
+        }
+
+        .navbar {
+            padding: 0 !important;
+        }
+
+        .login {
+            margin-right: -100px;
+            font-size: 15px;
+        }
+
+        .navbar-brand img {
+            width: 100px;
+            height: 60px;
+        }
+
+        .navbar-collapse {
+            justify-content: space-between;
+        }
+
+        .navbar-nav {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .nav-item {
+            flex: 0 1 auto;
+        }
+
+        ul.navbar-nav.m1-auto li {
+            padding-left: 30px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px 0; /* Reduced padding */
+            font-size: 14px; /* Smaller font size */
+            margin-top: 30px;
+        }
+
+        .footer-logo {
+            max-width: 180px;
+            margin-bottom: 5px;
+            margin-left: 100px;
+        }
+
+        .footer h5 {
+            margin-bottom: 10px; /* Reduced margin */
+            color: #fff;
+            font-size: 14px; /* Smaller font size */
+            text-transform: uppercase;
+        }
+
+        .footer ul {
+            padding: 0;
+            list-style: none;
+        }
+
+            .footer ul li {
+                margin-bottom: 5px; /* Reduced margin */
+            }
+
+                .footer ul li a {
+                    color: #aaa;
+                    text-decoration: none;
+                }
+
+                    .footer ul li a:hover {
+                        color: #fff;
+                    }
+
+        .social-media {
+            display: flex;
+            align-items: center;
+            margin-top: 10px; /* Reduced margin */
+        }
+
+            .social-media i {
+                font-size: 18px; /* Smaller icon size */
+                margin-right: 5px; /* Reduced margin */
+                color: #007bff;
+                padding: 8px;
+            }
+
+            .social-media a {
+                color: #007bff;
+                text-decoration: none;
+            }
+
+                .social-media a:hover {
+                    color: #0056b3;
+                }
+
+        .footer .contact-info p {
+            margin: 3px 0; /* Reduced margin */
+        }
+
+        .footer .contact-info i {
+            margin-right: 3px; /* Reduced margin */
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 10px; /* Reduced margin */
+            border-top: 1px solid #4e555b;
+            padding-top: 10px; /* Reduced padding */
+        }
+    </style>
+</head>
+<body>
+
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark @navbarClass">
+            <div class="container">
+                <a class="navbar-brand" href="/Home/Index">
+                    <img src="~/images/fitforge-high-resolution-logo-white.png" width="120" height="90" />
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse fs-6" id="navbarNav">
+                    <ul class="navbar-nav m1-auto ">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" href="@Url.Action("Index", "WorkoutPlans")">
+                                    <i class="fas fa-dumbbell"></i> Workout Plan
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="@Url.Action("Index", "ActivityLogs")">
+                                    <i class="fas fa-chart-line"></i> My Progress
+                                </a>
+                            </li>
+                            <li id="dietAndNutritionLink" class="nav-item">
+                                <a class="nav-link" href="@Url.Action("Index", "DietAndNutrition")">
+                                    <i  class="fas fa-utensils"></i> Diet and Nutrition
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="@Url.Action("Index", "Exercises")">
+                                    <i class="fas fa-running"></i> Exercises
+                                </a>
+                            </li>
+
+                            if (User.IsInRole("Admin"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link" href="@Url.Action("AddUserToRole", "Account")">
+                                        <i class="fas fa-users-cog"></i> Manage Roles
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="@Url.Action("ListUsers", "Admin")">
+                                        <i class="fas fa-users"></i> Users
+                                    </a>
+                                </li>
+                            }
+                        }
+                    </ul>
+                </div>
+                <div class="login">
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+        </nav>
+
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="~/images/logo-no-background.png" alt="Logo" class="footer-logo" />
+                </div>
+                <div class="col-md-2">
+                    <h5>Useful Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://myfitnesspal.com">myfitnesspal.com</a></li>
+                        <li><a href="https://muscleandstrength.com">muscleandstrength.com</a></li>
+                        <li><a href="https://bodybuilding.com">bodybuilding.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contact</h5>
+                    <div class="contact-info">
+                        <p><i class="bi bi-geo-alt"></i> Skopje, Macedonia</p>
+                        <p><i class="bi bi-telephone"></i> +38970305025</p>
+                        <p><i class="bi bi-envelope"></i> <a href="mailto:fitforge10@gmail.com">fitforge10@gmail.com</a></p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h5>Follow Us</h5>
+                    <div class="social-media">
+                        <a href="https://www.facebook.com/fitforge.mk"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/fitforge.mk/"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-12 footer-bottom">
+                    <p>&copy; 2024 FitForge. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

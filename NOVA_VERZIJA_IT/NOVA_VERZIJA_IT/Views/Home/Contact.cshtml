@@ -1,0 +1,100 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 0;
+    }
+
+    main {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 30px;
+        background-color: #fff;
+        border: 1px solid #dee2e6;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+        color: #343a40;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        text-align: center;
+        color: #6c757d;
+        margin-bottom: 30px;
+    }
+
+    address {
+        margin: 20px 0;
+        font-style: normal;
+        line-height: 1.6;
+        color: #495057;
+    }
+
+    .contact-info, .social-media {
+        margin-bottom: 20px;
+    }
+
+    .social-media {
+        display: flex;
+        align-items: center;
+    }
+
+        .social-media .social-links {
+            flex: 1;
+        }
+
+        .social-media h4 {
+            margin-bottom: 15px;
+            color: #343a40;
+        }
+
+        .social-media i {
+            font-size: 20px;
+            margin-right: 10px;
+            color: #007bff;
+        }
+
+        .social-media a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+            .social-media a:hover {
+                text-decoration: underline;
+            }
+
+
+    .social-media img {
+        width: 300px;
+        margin-left: 20px;
+    }
+</style>
+
+<main aria-labelledby="title">
+    <h2 id="title">@ViewBag.Title</h2>
+    <h3>@ViewBag.Message</h3>
+
+    <div class="social-media">
+        <div class="social-links">
+            <h4>Follow us on social media</h4>
+            <p>
+                <i class="bi bi-facebook"></i><a href="https://www.facebook.com/fitforge.mk">FitForge on Facebook</a><br />
+                <i class="bi bi-instagram"></i><a href="https://www.instagram.com/fitforge.mk/">FitForge on Instagram</a><br />
+                <i class="bi bi-envelope"></i> <a href="mailto:davidhristov10@gmail.com">davidhristov10@gmail.com</a>
+            </p>
+        </div>
+        <img src="~/images/logo-black.png" alt="FitForge Logo" />
+    </div>
+
+</main>

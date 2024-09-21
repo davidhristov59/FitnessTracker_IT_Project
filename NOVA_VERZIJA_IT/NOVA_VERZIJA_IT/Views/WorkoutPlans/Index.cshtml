@@ -1,0 +1,183 @@
+﻿@model IEnumerable<NOVA_VERZIJA_IT.Models.WorkoutPlan>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<h2 class="text-center" style="font-weight:700; margin-bottom:40px; ">Workout Plans</h2>
+
+
+@if (User.IsInRole("Admin"))
+{
+    <p>
+        @Html.ActionLink("Create New Workout Plan", "Create", null, new { @class = "btn btn-dark btn-create" })
+    </p>
+}
+
+
+<style>
+
+    body {
+        font-family: 'Barlow', sans-serif;
+    }
+
+    .card-img-top {
+        height: 230px;
+        object-fit: cover;
+    }
+
+    body > div > div > div > div:nth-child(2) > div > div > p{
+        width: 246px;
+        height: 240px;
+        
+    }
+
+    .card:hover{
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .card-body {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .card-title {
+        margin-bottom: 0.5rem;
+    }
+
+    .card-text {
+        flex: 1;
+    }
+
+    .card-buttons {
+        margin-top: 1rem;
+    }
+
+    .card-buttons .btn {
+            margin: 0.2rem;
+    }
+
+    .button-plan:hover {
+        background-color: #f8f9fa; /* Light gray background */
+        border-color: #adb5bd; /* Slightly darker border */
+        color: #212529; /* Dark text */
+    }
+
+    .btn-create {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        margin-bottom: 1rem;
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+        margin-left: 20px;
+    }
+
+    .btn-create:hover {
+        background-color: dimgray;
+        color: white;
+     }
+
+    .btn-small {
+        font-size: 0.8rem;
+        padding: 0.25rem 0.5rem;
+    }
+
+    .btn-small:hover {
+            background-color: #f8f9fa; /* Light gray background */
+            border-color: #adb5bd; /* Slightly darker border */
+            color: #212529; /* Dark text */
+     }
+
+    .button-plan .btn {
+        font-size: 0.8rem;
+        padding: 0.25rem 0.5rem;
+    }
+
+        .button-plan .btn:hover {
+            background-color: white;
+            border-color: #adb5bd;
+            color: #212529;
+        }
+
+    .button-view-plan:hover {
+        background-color: #f8f9fa;
+        border-color: #adb5bd;
+        color: #212529;
+    }
+
+    .col-md-4{
+        margin-bottom: 40px;
+    }
+    
+</style>
+
+<div class="container">
+
+    <div class="row">
+
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 d-flex align-items-stretch">
+
+                <div class="card h-100 border-dark" style="width: 18rem;">
+
+                    <img src="@item.ImageURL" alt="@item.Title" class="card-img-top"/>
+
+                    <div class="card-body">
+
+                        <h5 class="card-title" style="font-weight:400;">@item.Title</h5>
+
+                        <p class="card-text">@item.Description</p>
+
+                        <div class="card-buttons">
+
+                            <div class="d-flex justify-content-center button-plan">
+
+                                @if(User.IsInRole("Admin")){ 
+
+                                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { @class = "btn btn-outline-primary btn-small" })
+                                    @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { @class = "btn btn-outline-danger btn-small" })
+                                    @Html.ActionLink("Add New Exercise", "addNewExercise", new { id = item.ID }, new { @class = "btn btn-outline-success btn-small" })
+                                }
+
+                            </div>
+
+                            <div class="d-flex justify-content-center button-view-plan">
+                                @Html.ActionLink("View Plan", "Details", new { id = item.ID }, new { @class = "btn btn-dark btn-lg justify-content-center" })
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        }
+
+    </div>
+
+</div>
+
+

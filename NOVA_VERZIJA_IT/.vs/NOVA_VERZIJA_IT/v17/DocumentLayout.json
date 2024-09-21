@@ -1,0 +1,377 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDb__MSSQLLocalDB/aspnet_NOVA_VERZIJA_IT_20240711081056/True/SqlTable/dbo.Exercises.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|c:\\users\\user\\desktop\\fitnesstracker (it proekt)\\nova_verzija_it\\nova_verzija_it\\models\\exercise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|solutionrelative:nova_verzija_it\\models\\exercise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|c:\\users\\user\\desktop\\fitnesstracker (it proekt)\\nova_verzija_it\\nova_verzija_it\\controllers\\exercisescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|solutionrelative:nova_verzija_it\\controllers\\exercisescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|c:\\users\\user\\desktop\\fitnesstracker (it proekt)\\nova_verzija_it\\nova_verzija_it\\migrations\\202408132120187_addmusclegroupsjsontoexercise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|solutionrelative:nova_verzija_it\\migrations\\202408132120187_addmusclegroupsjsontoexercise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|c:\\users\\user\\desktop\\fitnesstracker (it proekt)\\nova_verzija_it\\nova_verzija_it\\views\\exercises\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|solutionrelative:nova_verzija_it\\views\\exercises\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|c:\\users\\user\\desktop\\fitnesstracker (it proekt)\\nova_verzija_it\\nova_verzija_it\\views\\exercises\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|solutionrelative:nova_verzija_it\\views\\exercises\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|c:\\users\\user\\desktop\\fitnesstracker (it proekt)\\nova_verzija_it\\nova_verzija_it\\views\\exercises\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|solutionrelative:nova_verzija_it\\views\\exercises\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|c:\\users\\user\\desktop\\fitnesstracker (it proekt)\\nova_verzija_it\\nova_verzija_it\\models\\workoutplan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|solutionrelative:nova_verzija_it\\models\\workoutplan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|c:\\users\\user\\desktop\\fitnesstracker (it proekt)\\nova_verzija_it\\nova_verzija_it\\models\\fitnessuserworkoutsplans.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|solutionrelative:nova_verzija_it\\models\\fitnessuserworkoutsplans.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|c:\\users\\user\\desktop\\fitnesstracker (it proekt)\\nova_verzija_it\\nova_verzija_it\\models\\fooditemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|solutionrelative:nova_verzija_it\\models\\fooditemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|c:\\users\\user\\desktop\\fitnesstracker (it proekt)\\nova_verzija_it\\nova_verzija_it\\models\\workoutexerciseplans.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|solutionrelative:nova_verzija_it\\models\\workoutexerciseplans.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|c:\\users\\user\\desktop\\fitnesstracker (it proekt)\\nova_verzija_it\\nova_verzija_it\\models\\weeklyexercise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|solutionrelative:nova_verzija_it\\models\\weeklyexercise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|c:\\users\\user\\desktop\\fitnesstracker (it proekt)\\nova_verzija_it\\nova_verzija_it\\controllers\\workoutplanscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|solutionrelative:nova_verzija_it\\controllers\\workoutplanscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|c:\\users\\user\\desktop\\fitnesstracker (it proekt)\\nova_verzija_it\\nova_verzija_it\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|solutionrelative:nova_verzija_it\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|c:\\users\\user\\desktop\\fitnesstracker (it proekt)\\nova_verzija_it\\nova_verzija_it\\controllers\\weeklyexercisescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|solutionrelative:nova_verzija_it\\controllers\\weeklyexercisescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|c:\\users\\user\\desktop\\fitnesstracker (it proekt)\\nova_verzija_it\\nova_verzija_it\\views\\weeklyexercises\\addexercise.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|solutionrelative:nova_verzija_it\\views\\weeklyexercises\\addexercise.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|c:\\users\\user\\desktop\\fitnesstracker (it proekt)\\nova_verzija_it\\nova_verzija_it\\views\\workoutplans\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|solutionrelative:nova_verzija_it\\views\\workoutplans\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|c:\\users\\user\\desktop\\fitnesstracker (it proekt)\\nova_verzija_it\\nova_verzija_it\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|solutionrelative:nova_verzija_it\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|c:\\users\\user\\desktop\\fitnesstracker (it proekt)\\nova_verzija_it\\nova_verzija_it\\models\\accountviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|solutionrelative:nova_verzija_it\\models\\accountviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|c:\\users\\user\\desktop\\fitnesstracker (it proekt)\\nova_verzija_it\\nova_verzija_it\\views\\admin\\listusers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|solutionrelative:nova_verzija_it\\views\\admin\\listusers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|c:\\users\\user\\desktop\\fitnesstracker (it proekt)\\nova_verzija_it\\nova_verzija_it\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}|NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT.csproj|solutionrelative:nova_verzija_it\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 130,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Exercise.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Models\\Exercise.cs",
+              "RelativeDocumentMoniker": "NOVA_VERZIJA_IT\\Models\\Exercise.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Models\\Exercise.cs",
+              "RelativeToolTip": "NOVA_VERZIJA_IT\\Models\\Exercise.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAxwCoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T01:09:13.612Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "dbo.Exercises [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDb__MSSQLLocalDB/aspnet_NOVA_VERZIJA_IT_20240711081056/True/SqlTable/dbo.Exercises.sql",
+              "ToolTip": "dbo.Exercises [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-09-21T01:08:53.34Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Views\\Exercises\\Create.cshtml",
+              "RelativeDocumentMoniker": "NOVA_VERZIJA_IT\\Views\\Exercises\\Create.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Views\\Exercises\\Create.cshtml",
+              "RelativeToolTip": "NOVA_VERZIJA_IT\\Views\\Exercises\\Create.cshtml",
+              "ViewState": "AQIAAMkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-21T01:07:56.367Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Views\\Exercises\\Index.cshtml",
+              "RelativeDocumentMoniker": "NOVA_VERZIJA_IT\\Views\\Exercises\\Index.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Views\\Exercises\\Index.cshtml",
+              "RelativeToolTip": "NOVA_VERZIJA_IT\\Views\\Exercises\\Index.cshtml",
+              "ViewState": "AQIAAC4BAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-21T01:07:25.125Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Views\\Exercises\\Details.cshtml",
+              "RelativeDocumentMoniker": "NOVA_VERZIJA_IT\\Views\\Exercises\\Details.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Views\\Exercises\\Details.cshtml",
+              "RelativeToolTip": "NOVA_VERZIJA_IT\\Views\\Exercises\\Details.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-21T01:07:12.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WorkoutPlan.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Models\\WorkoutPlan.cs",
+              "RelativeDocumentMoniker": "NOVA_VERZIJA_IT\\Models\\WorkoutPlan.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Models\\WorkoutPlan.cs",
+              "RelativeToolTip": "NOVA_VERZIJA_IT\\Models\\WorkoutPlan.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAmwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T01:06:07.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FitnessUserWorkoutsPlans.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Models\\FitnessUserWorkoutsPlans.cs",
+              "RelativeDocumentMoniker": "NOVA_VERZIJA_IT\\Models\\FitnessUserWorkoutsPlans.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Models\\FitnessUserWorkoutsPlans.cs",
+              "RelativeToolTip": "NOVA_VERZIJA_IT\\Models\\FitnessUserWorkoutsPlans.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T01:06:04.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FoodItemViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Models\\FoodItemViewModel.cs",
+              "RelativeDocumentMoniker": "NOVA_VERZIJA_IT\\Models\\FoodItemViewModel.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Models\\FoodItemViewModel.cs",
+              "RelativeToolTip": "NOVA_VERZIJA_IT\\Models\\FoodItemViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T01:06:02.272Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "WorkoutExercisePlans.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Models\\WorkoutExercisePlans.cs",
+              "RelativeDocumentMoniker": "NOVA_VERZIJA_IT\\Models\\WorkoutExercisePlans.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Models\\WorkoutExercisePlans.cs",
+              "RelativeToolTip": "NOVA_VERZIJA_IT\\Models\\WorkoutExercisePlans.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAIwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T01:05:57.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "WeeklyExercise.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Models\\WeeklyExercise.cs",
+              "RelativeDocumentMoniker": "NOVA_VERZIJA_IT\\Models\\WeeklyExercise.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Models\\WeeklyExercise.cs",
+              "RelativeToolTip": "NOVA_VERZIJA_IT\\Models\\WeeklyExercise.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAzwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T01:05:52.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "NOVA_VERZIJA_IT\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "NOVA_VERZIJA_IT\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAqwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T01:05:24.6Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ExercisesController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Controllers\\ExercisesController.cs",
+              "RelativeDocumentMoniker": "NOVA_VERZIJA_IT\\Controllers\\ExercisesController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Controllers\\ExercisesController.cs",
+              "RelativeToolTip": "NOVA_VERZIJA_IT\\Controllers\\ExercisesController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T01:05:05.654Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "WorkoutPlansController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Controllers\\WorkoutPlansController.cs",
+              "RelativeDocumentMoniker": "NOVA_VERZIJA_IT\\Controllers\\WorkoutPlansController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Controllers\\WorkoutPlansController.cs",
+              "RelativeToolTip": "NOVA_VERZIJA_IT\\Controllers\\WorkoutPlansController.cs",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAYwBYAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T01:04:57.721Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "WeeklyExercisesController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Controllers\\WeeklyExercisesController.cs",
+              "RelativeDocumentMoniker": "NOVA_VERZIJA_IT\\Controllers\\WeeklyExercisesController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Controllers\\WeeklyExercisesController.cs",
+              "RelativeToolTip": "NOVA_VERZIJA_IT\\Controllers\\WeeklyExercisesController.cs",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAswBQAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T01:04:24.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AddExercise.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Views\\WeeklyExercises\\AddExercise.cshtml",
+              "RelativeDocumentMoniker": "NOVA_VERZIJA_IT\\Views\\WeeklyExercises\\AddExercise.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Views\\WeeklyExercises\\AddExercise.cshtml",
+              "RelativeToolTip": "NOVA_VERZIJA_IT\\Views\\WeeklyExercises\\AddExercise.cshtml",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-21T01:04:17.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "202408132120187_AddMuscleGroupsJsonToExercise.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Migrations\\202408132120187_AddMuscleGroupsJsonToExercise.cs",
+              "RelativeDocumentMoniker": "NOVA_VERZIJA_IT\\Migrations\\202408132120187_AddMuscleGroupsJsonToExercise.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Migrations\\202408132120187_AddMuscleGroupsJsonToExercise.cs",
+              "RelativeToolTip": "NOVA_VERZIJA_IT\\Migrations\\202408132120187_AddMuscleGroupsJsonToExercise.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAA1wAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T01:04:01.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Views\\WorkoutPlans\\Index.cshtml",
+              "RelativeDocumentMoniker": "NOVA_VERZIJA_IT\\Views\\WorkoutPlans\\Index.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Views\\WorkoutPlans\\Index.cshtml",
+              "RelativeToolTip": "NOVA_VERZIJA_IT\\Views\\WorkoutPlans\\Index.cshtml",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAABIAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-21T01:03:00.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AccountViewModels.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Models\\AccountViewModels.cs",
+              "RelativeDocumentMoniker": "NOVA_VERZIJA_IT\\Models\\AccountViewModels.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Models\\AccountViewModels.cs",
+              "RelativeToolTip": "NOVA_VERZIJA_IT\\Models\\AccountViewModels.cs",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAuwHEAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T00:55:14.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "NOVA_VERZIJA_IT\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "NOVA_VERZIJA_IT\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAAAEsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-21T00:36:12.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ListUsers.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Views\\Admin\\ListUsers.cshtml",
+              "RelativeDocumentMoniker": "NOVA_VERZIJA_IT\\Views\\Admin\\ListUsers.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Views\\Admin\\ListUsers.cshtml",
+              "RelativeToolTip": "NOVA_VERZIJA_IT\\Views\\Admin\\ListUsers.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACAAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-21T00:15:30.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "NOVA_VERZIJA_IT\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FitnessTracker (IT proekt)\\NOVA_VERZIJA_IT\\NOVA_VERZIJA_IT\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "NOVA_VERZIJA_IT\\Controllers\\AdminController.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAIwCYAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T00:05:08.114Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

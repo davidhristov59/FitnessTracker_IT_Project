@@ -1,0 +1,42 @@
+﻿
+
+@model IEnumerable<NOVA_VERZIJA_IT.Models.ApplicationUser>
+@{
+    ViewBag.Title = "List of Users";
+}
+
+<h2 class="text-center">List of Users</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>User ID</th>
+            <th>Full Name</th>
+            <th>E-mail</th>
+            <th>Roles</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Id</td>
+                <td>@user.UserName</td>
+                <td>@user.Email</td>
+                <td>
+                    @{
+                        var roles = ViewBag.UserRoles[user.Id] as List<string>;
+                    }
+
+                    @if (roles != null && roles.Any())
+                    {
+                        foreach (var role in roles)
+                        {
+                            <span class="label label-info">@role</span>
+                        }
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

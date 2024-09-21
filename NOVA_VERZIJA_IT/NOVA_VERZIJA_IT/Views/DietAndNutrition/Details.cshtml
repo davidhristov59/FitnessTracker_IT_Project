@@ -1,0 +1,44 @@
+﻿@model NOVA_VERZIJA_IT.Models.Food
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 class="text-center">Details</h2>
+
+<div class="container">
+
+    <h2>@Model.Name</h2>
+
+
+    <div class="row">
+        <div class="col-md-6">
+            @if (!string.IsNullOrEmpty(Model.ImageUrl))
+            {
+                <img src="@Model.ImageUrl" alt="@Model.Name" style="width: 100%; height: auto;" />
+            }
+        </div>
+        <div class="col-md-6">
+            <dl class="dl-horizontal">
+                <dt>Serving Size (grams)</dt>
+                <dd>@Model.ServingSize</dd>
+                <dt>Protein (grams)</dt>
+                <dd>@Model.Protein</dd>
+                <dt>Carbs (grams)</dt>
+                <dd>@Model.Carbs</dd>
+                <dt>Fat (grams)</dt>
+                <dd>@Model.Fats</dd>
+                <dt>Calories</dt>
+                <dd>@Model.Calories</dd>
+                <dt>Ingredients</dt>
+                <dd>@Model.Ingredients</dd>
+            </dl>
+        </div>
+    </div>
+
+</div>
+
+
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

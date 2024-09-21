@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34701.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NOVA_VERZIJA_IT", "NOVA_VERZIJA_IT\NOVA_VERZIJA_IT.csproj", "{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitnessTracker", "..\FitnessTracker\FitnessTracker\FitnessTracker.csproj", "{DB1CE08E-D7C8-4225-8E8F-8A87A8A8052C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{381A6CA9-9067-4DF6-8CB0-BFFCAA432FEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB1CE08E-D7C8-4225-8E8F-8A87A8A8052C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB1CE08E-D7C8-4225-8E8F-8A87A8A8052C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB1CE08E-D7C8-4225-8E8F-8A87A8A8052C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB1CE08E-D7C8-4225-8E8F-8A87A8A8052C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {556A88EC-E11E-4F34-B687-A31EF177F1AE}
+	EndGlobalSection
+EndGlobal
