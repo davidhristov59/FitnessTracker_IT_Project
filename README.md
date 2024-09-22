@@ -3,9 +3,9 @@
 ## 👓Project Introduction
 This is my final project for the Internet Technologies course @FCSE - Skopje. It is a ready-to-use ASP .NET MVC application.
 
-## Description
+## 📝Project Overview
 
-An in-depth paragraph about your project and overview of use.
+* **FitForge** is a ready to use application for fitness and nutrition which is easy to use and has a simple user-friendly interface. The backend is developed with Entity Framework and the frontend is built with Bootstrap and Javascript  
 
 ## Getting Started
 
