@@ -1,8 +1,6 @@
-# FitnessTracker_IT_Project
- 
-# Project Title
+# FitForge
 
-Simple overview of use/purpose.
+This is my final project for the Internet Technologies course @FCSE - Skopje. It is a ready-to-use ASP .NET MVC application.
 
 ## Description
 
