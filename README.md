@@ -1,5 +1,6 @@
 # FitForge
 
+##👓Project Introduction
 This is my final project for the Internet Technologies course @FCSE - Skopje. It is a ready-to-use ASP .NET MVC application.
 
 ## Description
