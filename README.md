@@ -29,7 +29,7 @@ This is my final project for the Internet Technologies course @FCSE - Skopje. It
 
 ## Authors
 
-**David Hristov - Software Engineering Student @FCSE - Skopje
+**David Hristov - Software Engineering Student @FCSE - Skopje**
 
 
 
