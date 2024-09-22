@@ -5,34 +5,28 @@ This is my final project for the Internet Technologies course @FCSE - Skopje. It
 
 ## 📝Project Overview
 
-* **FitForge** is a ready to use application for fitness and nutrition which is easy to use and has a simple user-friendly interface. The backend is developed with Entity Framework and the frontend is built with Bootstrap and Javascript  
+* **FitForge** is a ready to use application for fitness and nutrition which is easy to use and has a simple user-friendly interface. The backend is developed with Entity Framework and the frontend is built with Bootstrap and Javascript
+* The application requires a simple registration process. More user information must be filled after the first log-in. Creating a user’s profile is obligatory and only users with active profiles can enjoy the full functionallity of the application.
+* Users can create foods and search exercises but do not have the possibility to edit or delete them. Only the administrator can delete foods and exercises.
+* Only admins can generate eating and workout plans which can be edited and deleted.
+* Only admins can see which users registered and can select the roles of a given user
 
-## Getting Started
+## 🔨Build With:
 
-### Dependencies
+* ASP .NET
+* Visual Studio 2022
+* Entity Framework
+* Bootstrap
+* JavaScript
+* Font Awesome
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+## 🔑Database Diagram
 
-### Installing
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+## 📷Application screenshots
 
-### Executing program
 
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
 
-## Help
-
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
 
 ## Authors
 
@@ -41,23 +35,7 @@ Contributors names and contact info
 ex. Dominique Pizzie  
 ex. [@DomPizzie](https://twitter.com/dompizzie)
 
-## Version History
-
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
-
 ## License
 
 This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
 
-## Acknowledgments
-
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
