@@ -27,15 +27,9 @@ This is my final project for the Internet Technologies course @FCSE - Skopje. It
 
 
 
-
 ## Authors
 
-Contributors names and contact info
+**David Hristov - Software Engineering Student @FCSE - Skopje
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
 
-## License
-
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
 
