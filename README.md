@@ -42,7 +42,7 @@ This is my final project for the Internet Technologies course @FCSE - Skopje. It
 
 ![manage_users](https://github.com/user-attachments/assets/bd795f90-26e9-4481-a8b2-edbebe833246)
 
-## Authors
+## 👨‍💻Authors
 
 **David Hristov - Software Engineering Student @FCSE - Skopje**
 
