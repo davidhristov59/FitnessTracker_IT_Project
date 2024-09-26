@@ -24,8 +24,15 @@ This is my final project for the Internet Technologies course @FCSE - Skopje. It
 
 
 ## 📷Application screenshots
+![home_page_admin](https://github.com/user-attachments/assets/82751270-6105-4409-bcc8-8a6bc7932df0)
 
+![exercises](https://github.com/user-attachments/assets/57f64884-cdd0-4b78-a4bb-b759a65d2adc)
 
+![workout_plans_details](https://github.com/user-attachments/assets/710cb820-e570-41e3-97bb-7fd273311ad4)
+
+![diet_nutrition](https://github.com/user-attachments/assets/1b031ee6-891f-4c2b-b4d5-b0897ddfd0c1)
+
+![users](https://github.com/user-attachments/assets/e35c729d-2bc4-4eb1-a5d9-9013b463e071)
 
 ## Authors
 
