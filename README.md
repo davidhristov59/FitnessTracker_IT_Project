@@ -22,6 +22,8 @@ This is my final project for the Internet Technologies course @FCSE - Skopje. It
 
 ## 🔑Database Diagram
 
+![database_schema](https://github.com/user-attachments/assets/18057470-f4aa-44be-ae65-282a915fb2e7)
+
 
 ## 📷Application screenshots
 ![home_page_admin](https://github.com/user-attachments/assets/82751270-6105-4409-bcc8-8a6bc7932df0)
